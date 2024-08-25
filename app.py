@@ -60,4 +60,4 @@ def process_data():
         return jsonify({"is_success": False, "error": "An unexpected error occurred."}), 500
 
 if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0', port=5000)
+    app.run(debug=False, host='0.0.0.0', port=80)
