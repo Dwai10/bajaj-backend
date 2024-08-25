@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from collections import OrderedDict
 import re
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 # Utility function to validate and process the data
 def process_request_data(data):
@@ -59,5 +59,5 @@ def process_data():
     except Exception as e:
         return jsonify({"is_success": False, "error": "An unexpected error occurred."}), 500
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     app.run(debug=False, host='0.0.0.0', port=5000)
