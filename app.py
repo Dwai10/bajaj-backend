@@ -1,8 +1,10 @@
 from flask import Flask, request, jsonify
 from collections import OrderedDict
+from flask_cors import CORS
 import re
 
 app = Flask(__name__)
+CORS(app)
 
 # Utility function to validate and process the data
 def process_request_data(data):
